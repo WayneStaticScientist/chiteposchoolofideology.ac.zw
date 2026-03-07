@@ -2,36 +2,20 @@
 import React, { useState, useEffect } from "react";
 import {
   MapPin,
-  Phone,
-  Menu,
-  X,
-  ChevronRight,
   ShieldCheck,
   Globe,
-  ExternalLink,
   Award,
   Quote,
   ArrowRight,
-  Target,
-  ChevronLeft,
 } from "lucide-react";
-import { Typewriter } from "@/components/views/type-writter";
 import NavBar from "@/components/layouts/navbar";
 import Footer from "@/components/layouts/footer";
 import MainCarousel from "@/components/layouts/main-carousel";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-
-  const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
     setLoading(false);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // SEO Structured Data
@@ -109,7 +93,7 @@ const HomeView = () => {
               <div className="absolute -inset-4 bg-green-100 rounded-[3rem] rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
               <div className="relative h-[600px] bg-slate-200 rounded-[2.5rem] overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                  src="/assets/chitepo.jpg"
                   alt="Principal"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />

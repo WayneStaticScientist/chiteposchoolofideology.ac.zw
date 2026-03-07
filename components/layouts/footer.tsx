@@ -6,6 +6,7 @@ import {
   Phone,
   ShieldCheck,
 } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
@@ -16,7 +17,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-8">
-              <ShieldCheck className="text-green-500 w-10 h-10" />
+              <Image
+                src={"/apple-touch-icon.png"}
+                width={30}
+                height={30}
+                alt={"logo"}
+              />
               <h2 className="font-black text-2xl tracking-tighter">
                 HERBERT CHITEPO <span className="text-green-500">SCHOOL</span>
               </h2>

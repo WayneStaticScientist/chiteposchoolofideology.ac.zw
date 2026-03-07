@@ -54,10 +54,6 @@ export default function MainCarousel() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-md border border-green-500/30 text-green-400 px-4 py-2 rounded-full text-sm font-bold mb-8 animate-in fade-in slide-in-from-top-4 duration-500">
-            <Award size={16} /> {slides[currentSlide].tag}
-          </div>
-
           <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-8 tracking-tighter">
             DECOLONISING <br /> THE <Typewriter />
           </h1>
@@ -68,7 +64,7 @@ export default function MainCarousel() {
 
           <div className="flex flex-wrap gap-5">
             <button className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-green-500 hover:scale-105 transition-all shadow-2xl shadow-green-900/50 group">
-              Enroll for 2024{" "}
+              Enroll for {new Date().getFullYear()}
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </button>
             <button className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/20 transition-all">

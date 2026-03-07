@@ -2,61 +2,29 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Chitepo School of Ideology",
-  description: "",
+  description:
+    "The Herbert Chitepo School of Ideology is more than an educational institution; it is the ideological heartbeat of Zimbabwe. Named after the visionary lawyer and revolutionary leader Herbert Wiltshire Pfumaindini Chitepo, we serve as a forge for patriotic consciousness.",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "About",
+      href: "/about",
     },
+    { label: "Curriculum", id: "curriculum" },
+    { label: "Apply", id: "apply" },
+    { label: "Student Portal", id: "portal" },
+  ],
+  navMenuItems: [
     {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
+      label: "Home",
+      href: "/",
     },
     {
       label: "About",
       href: "/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
     },
   ],
   links: {

@@ -9,13 +9,11 @@ import {
   Users,
   Zap,
   Scale,
-  Phone,
-  Mail,
-  MapPin,
 } from "lucide-react";
 import NavBar from "@/components/layouts/navbar";
 import { Breadcrumb } from "@/components/layouts/breadcrump";
 import { ValueCard } from "@/components/layouts/value-card";
+import Footer from "@/components/layouts/footer";
 
 /**
  * MOCK COMPONENTS
@@ -287,86 +285,7 @@ const App = () => {
       </main>
 
       {/* Footer Mockup */}
-      <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-20">
-            <div className="col-span-2">
-              <div className="flex items-center gap-2 mb-8">
-                <div className="bg-green-600 p-2 rounded-lg">
-                  <ShieldCheck className="text-white w-6 h-6" />
-                </div>
-                <span className="font-black text-2xl tracking-tighter">
-                  CHITEPO <span className="text-green-600">SCHOOL</span>
-                </span>
-              </div>
-              <p className="text-slate-400 text-lg max-w-md mb-8">
-                The premier ideological school in Zimbabwe dedicated to shaping
-                the patriotic leaders of tomorrow.
-              </p>
-              <div className="flex gap-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer"
-                  >
-                    <Users size={18} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-black text-xl mb-8">Quick Links</h4>
-              <ul className="space-y-4 text-slate-400 font-medium">
-                <li className="hover:text-green-500 cursor-pointer transition-colors">
-                  About Us
-                </li>
-                <li className="hover:text-green-500 cursor-pointer transition-colors">
-                  Our Team
-                </li>
-                <li className="hover:text-green-500 cursor-pointer transition-colors">
-                  Curriculum
-                </li>
-                <li className="hover:text-green-500 cursor-pointer transition-colors">
-                  News & Events
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-black text-xl mb-8">Contact Us</h4>
-              <ul className="space-y-6 text-slate-400">
-                <li className="flex gap-4">
-                  <MapPin className="text-green-600 shrink-0" size={20} />
-                  <span>53F3+QH7, Simon Muzenda St, Harare, Zimbabwe</span>
-                </li>
-                <li className="flex gap-4">
-                  <Phone className="text-green-600 shrink-0" size={20} />
-                  <span>+263 242 700000</span>
-                </li>
-                <li className="flex gap-4">
-                  <Mail className="text-green-600 shrink-0" size={20} />
-                  <span>info@chiteposchool.ac.zw</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-500 text-sm">
-              © 2024 Herbert Chitepo School of Ideology. All Rights Reserved.
-            </p>
-            <div className="flex gap-8 text-slate-500 text-sm font-bold">
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Privacy Policy
-              </span>
-              <span className="hover:text-white cursor-pointer transition-colors">
-                Terms of Service
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
