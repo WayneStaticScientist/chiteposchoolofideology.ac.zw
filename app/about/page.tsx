@@ -1,9 +1,374 @@
-import { title } from "@/components/primitives";
+import React from "react";
+import {
+  ShieldCheck,
+  Target,
+  History,
+  Award,
+  Eye,
+  CheckCircle2,
+  Users,
+  Zap,
+  Scale,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
+import NavBar from "@/components/layouts/navbar";
+import { Breadcrumb } from "@/components/layouts/breadcrump";
+import { ValueCard } from "@/components/layouts/value-card";
 
-export default function AboutPage() {
+/**
+ * MOCK COMPONENTS
+ * Since the original project has external layouts, I've consolidated
+ * a matching NavBar and Footer into this single-file React component.
+ */
+
+const App = () => {
   return (
-    <div>
-      <h1 className={title()}>About</h1>
+    <div className="min-h-screen bg-white selection:bg-green-600 selection:text-white">
+      <NavBar activeTab="/about" />
+      <main>
+        <Breadcrumb />
+        <section className="py-24 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <div className="absolute -top-10 -left-10 w-40 h-40 bg-green-100 rounded-full blur-3xl opacity-60"></div>
+                <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl transform transition-transform hover:scale-[1.02] duration-500">
+                  <img
+                    src="https://images.unsplash.com/photo-1524178232363-1fb28f74b0cd?auto=format&fit=crop&q=80&w=1000"
+                    alt="School Building"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-950/60 to-transparent"></div>
+                  <div className="absolute bottom-8 left-8">
+                    <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20">
+                      <div className="bg-green-500 p-3 rounded-xl">
+                        <Users className="text-white" />
+                      </div>
+                      <div>
+                        <p className="text-white font-black text-2xl">
+                          10,000+
+                        </p>
+                        <p className="text-green-300 text-xs font-bold uppercase tracking-wider">
+                          Trained Cadres
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full text-green-700 font-bold text-xs uppercase tracking-widest mb-6">
+                  <ShieldCheck size={14} /> Our Identity
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">
+                  A Legacy Rooted in{" "}
+                  <span className="text-green-600">Sovereignty</span>
+                </h2>
+                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                  The Herbert Chitepo School of Ideology is more than an
+                  educational institution; it is the ideological heartbeat of
+                  Zimbabwe. Named after the visionary lawyer and revolutionary
+                  leader Herbert Wiltshire Pfumaindini Chitepo, we serve as a
+                  forge for patriotic consciousness.
+                </p>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  Our mission is to decolonise the African mind through
+                  home-grown solutions, fostering a sense of ownership over our
+                  national destiny and economic prosperity.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 mt-1" size={18} />
+                    <span className="font-bold text-slate-800">
+                      Patriotic Training
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 mt-1" size={18} />
+                    <span className="font-bold text-slate-800">
+                      Policy Development
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 mt-1" size={18} />
+                    <span className="font-bold text-slate-800">
+                      Strategic Research
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 mt-1" size={18} />
+                    <span className="font-bold text-slate-800">
+                      Leadership Excellence
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="py-24 bg-slate-50 relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-green-700 p-12 rounded-[3rem] text-white relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-8 text-white/10 group-hover:scale-150 transition-transform duration-700">
+                  <Target size={180} />
+                </div>
+                <div className="relative z-10">
+                  <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm">
+                    <Target size={32} />
+                  </div>
+                  <h3 className="text-3xl font-black mb-6">Our Mission</h3>
+                  <p className="text-green-50 text-xl leading-relaxed">
+                    To interpret and define Zimbabwe’s past, present, and future
+                    within an ideological framework that promotes national
+                    interest, sovereignty, and social justice.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-slate-900 p-12 rounded-[3rem] text-white relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-8 text-white/10 group-hover:scale-150 transition-transform duration-700">
+                  <Eye size={180} />
+                </div>
+                <div className="relative z-10">
+                  <div className="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm">
+                    <Eye size={32} />
+                  </div>
+                  <h3 className="text-3xl font-black mb-6">Our Vision</h3>
+                  <p className="text-slate-300 text-xl leading-relaxed">
+                    To be the leading African institution in ideological
+                    training, nurturing leaders committed to the sustainable
+                    development and total empowerment of the Zimbabwean people.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-green-600 font-black tracking-widest text-sm uppercase mb-4">
+                Values that Guide Us
+              </p>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900">
+                Built on Foundational Principles
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <ValueCard
+                icon={Zap}
+                title="Patriotism"
+                desc="Unwavering loyalty and devotion to the heritage and future of Zimbabwe."
+              />
+              <ValueCard
+                icon={History}
+                title="Integrity"
+                desc="Acting with honesty and strong moral principles in national service."
+              />
+              <ValueCard
+                icon={Scale}
+                title="Social Justice"
+                desc="Ensuring equality and fairness in the distribution of national resources."
+              />
+              <ValueCard
+                icon={Award}
+                title="Excellence"
+                desc="Striving for the highest standards in education and policy execution."
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* History / Timeline Snippet */}
+        <section className="py-24 bg-green-950 text-white overflow-hidden relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row gap-20 items-center">
+              <div className="lg:w-1/2">
+                <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+                  A History of <br />
+                  <span className="text-green-500 italic font-light">
+                    Transformation
+                  </span>
+                </h2>
+                <div className="space-y-12">
+                  <div className="flex gap-6">
+                    <div className="flex flex-col items-center">
+                      <div className="w-4 h-4 rounded-full bg-green-500"></div>
+                      <div className="w-1 h-full bg-green-500/20"></div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black text-green-500">
+                        1970s
+                      </h4>
+                      <p className="text-slate-400 mt-2">
+                        Born in the liberation war as a means to orient cadres
+                        towards the goals of independence.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-6">
+                    <div className="flex flex-col items-center">
+                      <div className="w-4 h-4 rounded-full bg-green-500"></div>
+                      <div className="w-1 h-full bg-green-500/20"></div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black text-green-500">
+                        2016
+                      </h4>
+                      <p className="text-slate-400 mt-2">
+                        Institutionalized as a formal school to provide
+                        ideological training for public service.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-6">
+                    <div className="flex flex-col items-center">
+                      <div className="w-4 h-4 rounded-full bg-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black text-green-500">
+                        Today
+                      </h4>
+                      <p className="text-slate-400 mt-2">
+                        A world-class academy training thousands of leaders
+                        across various sectors of the economy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:w-1/2 relative">
+                <div className="relative z-10 p-1 bg-white/5 rounded-[3.5rem] backdrop-blur-sm border border-white/10">
+                  <img
+                    src="https://images.unsplash.com/photo-1544640808-32ca72ac7f67?auto=format&fit=crop&q=80&w=800"
+                    alt="Legacy"
+                    className="rounded-[3.3rem] grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700 h-[500px] w-full object-cover"
+                  />
+                </div>
+                {/* Decorative Elements */}
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-500/10 blur-[100px] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-24 bg-white px-6">
+          <div className="max-w-7xl mx-auto bg-green-600 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-green-600/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+            <h2 className="text-4xl md:text-6xl font-black mb-8 relative z-10">
+              Be Part of the Future.
+            </h2>
+            <p className="text-xl text-green-100 max-w-2xl mx-auto mb-12 relative z-10">
+              Join thousands of patriots in shaping the narrative of a
+              prosperous, self-sufficient, and proud Zimbabwe.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+              <button className="bg-white text-green-700 px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform shadow-xl">
+                Apply for Admission
+              </button>
+              <button className="bg-green-700/50 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-green-700 transition-colors">
+                View Curriculum
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer Mockup */}
+      <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-20">
+            <div className="col-span-2">
+              <div className="flex items-center gap-2 mb-8">
+                <div className="bg-green-600 p-2 rounded-lg">
+                  <ShieldCheck className="text-white w-6 h-6" />
+                </div>
+                <span className="font-black text-2xl tracking-tighter">
+                  CHITEPO <span className="text-green-600">SCHOOL</span>
+                </span>
+              </div>
+              <p className="text-slate-400 text-lg max-w-md mb-8">
+                The premier ideological school in Zimbabwe dedicated to shaping
+                the patriotic leaders of tomorrow.
+              </p>
+              <div className="flex gap-4">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer"
+                  >
+                    <Users size={18} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-black text-xl mb-8">Quick Links</h4>
+              <ul className="space-y-4 text-slate-400 font-medium">
+                <li className="hover:text-green-500 cursor-pointer transition-colors">
+                  About Us
+                </li>
+                <li className="hover:text-green-500 cursor-pointer transition-colors">
+                  Our Team
+                </li>
+                <li className="hover:text-green-500 cursor-pointer transition-colors">
+                  Curriculum
+                </li>
+                <li className="hover:text-green-500 cursor-pointer transition-colors">
+                  News & Events
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-black text-xl mb-8">Contact Us</h4>
+              <ul className="space-y-6 text-slate-400">
+                <li className="flex gap-4">
+                  <MapPin className="text-green-600 shrink-0" size={20} />
+                  <span>53F3+QH7, Simon Muzenda St, Harare, Zimbabwe</span>
+                </li>
+                <li className="flex gap-4">
+                  <Phone className="text-green-600 shrink-0" size={20} />
+                  <span>+263 242 700000</span>
+                </li>
+                <li className="flex gap-4">
+                  <Mail className="text-green-600 shrink-0" size={20} />
+                  <span>info@chiteposchool.ac.zw</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-slate-500 text-sm">
+              © 2024 Herbert Chitepo School of Ideology. All Rights Reserved.
+            </p>
+            <div className="flex gap-8 text-slate-500 text-sm font-bold">
+              <span className="hover:text-white cursor-pointer transition-colors">
+                Privacy Policy
+              </span>
+              <span className="hover:text-white cursor-pointer transition-colors">
+                Terms of Service
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
-}
+};
+
+export default App;
