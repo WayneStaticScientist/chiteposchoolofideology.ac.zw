@@ -65,7 +65,7 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-green-600 selection:text-white">
+    <div className="min-h-screen  bg-slate-50 font-sans text-slate-900 selection:bg-green-600 selection:text-white">
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>

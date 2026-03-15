@@ -1,7 +1,7 @@
 "use client";
-import { Award, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Typewriter } from "../views/type-writter";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function MainCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +54,7 @@ export default function MainCarousel() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
         <div className="max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-8 tracking-tighter">
+          <h1 className="lg:text-6xl text-3xl font-black text-white leading-[0.9] mb-8 tracking-tighter">
             DECOLONISING <br /> THE <Typewriter />
           </h1>
 

@@ -15,8 +15,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
-
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1, // This prevents "auto-zoom" on some devices
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -33,7 +35,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased",
+          "min-h-screen text-foreground bg-background font-sans antialiased overflow-x-hidden!",
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
