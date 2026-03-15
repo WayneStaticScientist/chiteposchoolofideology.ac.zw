@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
+import AiChat from "@/components/layouts/ai-chat";
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           {children}
+          <AiChat />
         </Providers>
       </body>
     </html>
