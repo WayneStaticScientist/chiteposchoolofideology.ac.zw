@@ -89,11 +89,11 @@ export default function App() {
                   </span>
                 </h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  The mission of the Herbert Chitepo School of Ideology is
-                  anchored in the belief that true independence starts in the
-                  mind. We are dedicated to providing educational frameworks
-                  that celebrate our heritage while looking forward to a
-                  self-sufficient future.
+                  The mission of the Chitepo School of Ideology is anchored in
+                  the belief that true independence starts in the mind. We are
+                  dedicated to providing educational frameworks that celebrate
+                  our heritage while looking forward to a self-sufficient
+                  future.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                   {[

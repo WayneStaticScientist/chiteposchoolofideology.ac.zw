@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 export const siteConfig = {
   name: "Chitepo School of Ideology",
   description:
-    "The Herbert Chitepo School of Ideology is more than an educational institution; it is the ideological heartbeat of Zimbabwe.",
+    "The Chitepo School of Ideology is more than an educational institution; it is the ideological heartbeat of Zimbabwe.",
   navItems: [
     {
       label: "Home",
@@ -22,7 +22,30 @@ export const siteConfig = {
         { label: "Values", href: "/about/values" },
       ],
     },
-    { label: "Curriculum", href: "/curriculum", id: "curriculum" },
+    {
+      label: "Courses",
+      children: [
+        { label: "Part Governancy", href: "#" },
+        {
+          label: "National Defense And Security Policy",
+          href: "#",
+        },
+        { label: "Part Governancy", href: "#" },
+        {
+          label: "Emerging Trends on the Geo-Political Landscape",
+          href: "#",
+        },
+        {
+          label: "National Ideology",
+          href: "#",
+        },
+        {
+          label: "National Heritage",
+          href: "#",
+        },
+      ],
+      id: "courses",
+    },
     { label: "Apply", href: "/apply", id: "apply" },
     { label: "Student Portal", href: "/portal", id: "portal" },
   ],

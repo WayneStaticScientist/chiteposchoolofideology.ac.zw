@@ -24,7 +24,7 @@ export default function Footer() {
                 alt={"logo"}
               />
               <h2 className="font-black text-2xl tracking-tighter">
-                HERBERT CHITEPO <span className="text-green-500">SCHOOL</span>
+                CHITEPO <span className="text-green-500">SCHOOL</span>
               </h2>
             </div>
             <p className="text-slate-400 text-lg leading-relaxed max-w-xl mb-8">
@@ -95,8 +95,8 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} Herbert Chitepo School of
-            Ideology. #DecolonisingTheMind
+            &copy; {new Date().getFullYear()} Chitepo School of Ideology.
+            #DecolonisingTheMind
           </p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white">

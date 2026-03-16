@@ -22,7 +22,7 @@ const App = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "Herbert Chitepo School of Ideology",
+    name: "Chitepo School of Ideology",
     alternateName: "Chitepo School of Ideology",
     address: {
       "@type": "PostalAddress",
@@ -98,9 +98,7 @@ const HomeView = () => {
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-0 left-0 w-full p-10 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
-                  <p className="text-white font-black text-3xl">
-                    Herbert Chitepo
-                  </p>
+                  <p className="text-white font-black text-3xl">Chitepo</p>
                   <p className="text-green-400 font-bold tracking-widest text-xs uppercase">
                     Foundational Visionary
                   </p>
