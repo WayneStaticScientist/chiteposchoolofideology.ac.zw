@@ -25,12 +25,12 @@ export const siteConfig = {
     {
       label: "Courses",
       children: [
-        { label: "Part Governancy", href: "#" },
+        { label: "Party Governancy", href: "#" },
         {
           label: "National Defense And Security Policy",
           href: "#",
         },
-        { label: "Part Governancy", href: "#" },
+        { label: "Party Governancy", href: "#" },
         {
           label: "Emerging Trends on the Geo-Political Landscape",
           href: "#",
