@@ -8,21 +8,21 @@ export default function MainCarousel() {
   const slides = [
     {
       image:
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2000",
+        "/slide_1.png",
       tag: "Academic Excellence",
       title: "Building the Leaders of Tomorrow",
       desc: "Nurturing a new generation of patriots committed to Zimbabwe's progress.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2000",
+        "/slide_2.png",
       tag: "Cultural Integrity",
       title: "Rooted in National Heritage",
       desc: "Interpreting our history to drive future economic sovereignty.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1523050335102-c3250908b30f?auto=format&fit=crop&q=80&w=2000",
+        "/slide_3.png",
       tag: "Social Justice",
       title: "Championing National Values",
       desc: "Committed to the constitutional values of unity, freedom, and equality.",
