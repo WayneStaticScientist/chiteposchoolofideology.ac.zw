@@ -180,9 +180,9 @@ export default function App() {
               transformation today and become a value-driven leader in the new
               Zimbabwe.
             </p>
-            <button className="bg-white text-green-700 px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform relative z-10 shadow-xl">
+            <a href="https://studentcsi.comradeconnect.co.zw/welcome" className="bg-white text-green-700 px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform relative z-10 shadow-xl inline-block">
               Apply for Enrollment
-            </button>
+            </a>
             <div
               className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
               style={{

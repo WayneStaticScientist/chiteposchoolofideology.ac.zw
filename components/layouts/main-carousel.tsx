@@ -63,10 +63,10 @@ export default function MainCarousel() {
           </p>
 
           <div className="flex flex-wrap gap-5">
-            <button className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-green-500 hover:scale-105 transition-all shadow-2xl shadow-green-900/50 group">
+            <a href="https://studentcsi.comradeconnect.co.zw/welcome" className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-green-500 hover:scale-105 transition-all shadow-2xl shadow-green-900/50 group inline-flex">
               Enroll for {new Date().getFullYear()}
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-            </button>
+            </a>
             <button className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/20 transition-all">
               Our Legacy
             </button>

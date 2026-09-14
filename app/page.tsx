@@ -283,9 +283,9 @@ const HomeView = () => {
               Join the ranks of Zimbabwe's most dedicated future leaders.
               Enrollment for the Summer cohort is now open.
             </p>
-            <button className="bg-white text-green-900 px-12 py-6 rounded-2xl font-black text-xl hover:bg-green-50 transition-all hover:scale-105 active:scale-95 shadow-xl">
+            <a href="https://studentcsi.comradeconnect.co.zw/welcome" className="bg-white text-green-900 px-12 py-6 rounded-2xl font-black text-xl hover:bg-green-50 transition-all hover:scale-105 active:scale-95 shadow-xl inline-block">
               Enroll Today
-            </button>
+            </a>
           </div>
         </div>
       </section>

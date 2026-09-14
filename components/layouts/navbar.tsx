@@ -151,9 +151,9 @@ export default function NavBar({ activeTab = "home" }: { activeTab?: string }) {
               </a>
             );
           })}
-          <button className="bg-green-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-green-700 transition-all hover:shadow-[0_0_20px_rgba(22,163,74,0.4)] active:scale-95 ml-2">
+          <a href="https://studentcsi.comradeconnect.co.zw/welcome" className="bg-green-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-green-700 transition-all hover:shadow-[0_0_20px_rgba(22,163,74,0.4)] active:scale-95 ml-2 text-center inline-block">
             Enroll Now
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -222,9 +222,9 @@ export default function NavBar({ activeTab = "home" }: { activeTab?: string }) {
             </div>
           ))}
 
-          <button className="mt-8 bg-white text-green-950 w-full py-4 rounded-2xl text-xl font-black active:scale-95 transition-transform">
+          <a href="https://studentcsi.comradeconnect.co.zw/welcome" className="mt-8 bg-white text-green-950 w-full py-4 rounded-2xl text-xl font-black active:scale-95 transition-transform text-center block">
             Enroll Now
-          </button>
+          </a>
         </div>
       )}
     </nav>
