@@ -35,14 +35,14 @@ export async function* sendMessageStream(
   }
 
   // 3. Make the Axios request
+  // 3. Make the Axios request (using standard fetch for streaming)
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_NYIKA_API}/user/chat/ai-stream-van`,
+    `${process.env.NEXT_PUBLIC_API_URL}/vanguard/stream`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         question: message,
-        date: 1,
         convo: convo,
       }),
     },
