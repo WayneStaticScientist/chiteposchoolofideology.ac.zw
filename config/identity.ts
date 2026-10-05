@@ -1,3 +1,12 @@
+export const schoolContact = {
+  addressLine1: "111 Samora Machel Avenue",
+  addressLocality: "Harare",
+  addressCountry: "Zimbabwe",
+  phoneDisplay: "+263 8688008696",
+  phoneTel: "+2638688008696",
+  mapsQuery: "111 Samora Machel Avenue, Harare, Zimbabwe",
+};
+
 export const schoolIdentity = {
   name: "Chitepo School of Ideology",
   tagline: "Decolonising the Mind",

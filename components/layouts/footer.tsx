@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import React from "react";
 
-import { schoolIdentity } from "@/config/identity";
+import { schoolContact, schoolIdentity } from "@/config/identity";
 
 export default function Footer() {
   return (
@@ -54,15 +54,20 @@ export default function Footer() {
             <div className="space-y-4 text-slate-400">
               <p className="font-medium text-white">Main Campus</p>
               <p>
-                53F3+QH7, Simon Muzenda St,
+                {schoolContact.addressLine1}
                 <br />
-                Harare, Zimbabwe
-              </p>
-              <p className="flex items-center gap-2 text-white font-bold">
-                <Phone size={16} /> +27 61 804 6523
+                {schoolContact.addressLocality}, {schoolContact.addressCountry}
               </p>
               <a
-                href="#"
+                href={`tel:${schoolContact.phoneTel}`}
+                className="flex items-center gap-2 font-bold text-white hover:text-green-400"
+              >
+                <Phone size={16} /> {schoolContact.phoneDisplay}
+              </a>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(schoolContact.mapsQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-green-500 flex items-center gap-1 hover:underline text-sm pt-2"
               >
                 Open Google Maps <ExternalLink size={14} />

@@ -11,7 +11,7 @@ import {
 import NavBar from "@/components/layouts/navbar";
 import Footer from "@/components/layouts/footer";
 import MainCarousel from "@/components/layouts/main-carousel";
-import { schoolIdentity } from "@/config/identity";
+import { schoolContact, schoolIdentity } from "@/config/identity";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -27,11 +27,11 @@ const App = () => {
     alternateName: "Chitepo School of Ideology",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "53F3+QH7, Simon Muzenda St",
-      addressLocality: "Harare",
+      streetAddress: schoolContact.addressLine1,
+      addressLocality: schoolContact.addressLocality,
       addressCountry: "ZW",
     },
-    telephone: "+27618046523",
+    telephone: schoolContact.phoneTel,
     description: schoolIdentity.mission,
     url: "https://chiteposchool.ac.zw",
   };
@@ -258,7 +258,7 @@ const HomeView = () => {
                       {event.title}
                     </h4>
                     <p className="text-slate-500 text-sm mt-2 flex items-center gap-2">
-                      <MapPin size={12} /> Harare Main Campus
+                      <MapPin size={12} /> {schoolContact.addressLine1}
                     </p>
                   </div>
                 </div>
