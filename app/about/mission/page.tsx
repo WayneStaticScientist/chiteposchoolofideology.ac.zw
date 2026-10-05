@@ -171,10 +171,9 @@ export default function App() {
               Join the Mission.
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12 relative z-10 leading-relaxed">
-              Our mission is a collective effort. Whether you are a student,
-              professional, or civil servant, citizen or foreign national there is a place for you in our
-              orientation programs.
-            </p>
+              To produce competent cadres with the correct Party Ideological orientation , And Necessary skills to meet dynamic needs of Zimbabwean nation
+              
+               </p>
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
               <button className="bg-green-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-transform">
                 Apply for Admission
