@@ -172,7 +172,7 @@ export default function App() {
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12 relative z-10 leading-relaxed">
               Our mission is a collective effort. Whether you are a student,
-              professional, or civil servant, there is a place for you in our
+              professional, or civil servant, citizen or foreign national there is a place for you in our
               orientation programs.
             </p>
             <div className="flex flex-wrap justify-center gap-6 relative z-10">
