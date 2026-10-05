@@ -1,3 +1,6 @@
+/** Public student enrollment entry (same as main nav). */
+export const enrollUrl = "https://studentcsi.comradeconnect.co.zw/welcome";
+
 export const schoolContact = {
   addressLine1: "111 Samora Machel Avenue",
   addressLocality: "Harare",
