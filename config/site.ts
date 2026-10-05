@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Chitepo School of Ideology",
   description:
-    "The Chitepo School of Ideology is more than an educational institution; it is the ideological heartbeat of Zimbabwe. Named after the visionary lawyer and revolutionary leader Wiltshire Pfumaindini Chitepo, we serve as a forge for patriotic consciousness.",
+    "Chitepo School of Ideology — Decolonising the Mind. To produce competent patriotic cadres with the correct Party Ideological orientation and necessary skills to meet the dynamic needs of the Zimbabwean nation.",
   navItems: [
     {
       label: "Home",

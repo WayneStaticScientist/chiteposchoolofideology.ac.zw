@@ -9,6 +9,8 @@ import {
 import Image from "next/image";
 import React from "react";
 
+import { schoolIdentity } from "@/config/identity";
+
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white pt-24 pb-12 overflow-hidden relative">
@@ -27,10 +29,11 @@ export default function Footer() {
                 CHITEPO <span className="text-green-500">SCHOOL</span>
               </h2>
             </div>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-xl mb-8">
-              Standing resolute in decolonising the mind and nurturing a new
-              generation of patriots. Rooted in Zimbabwe’s constitutional
-              aspirations for a shared future of prosperity.
+            <p className="text-slate-400 text-lg leading-relaxed max-w-xl mb-4 italic">
+              {schoolIdentity.tagline}
+            </p>
+            <p className="text-slate-400 text-base leading-relaxed max-w-xl mb-8">
+              {schoolIdentity.mission}
             </p>
             <div className="flex gap-4">
               {["Twitter", "Facebook", "LinkedIn", "YouTube"].map((social) => (

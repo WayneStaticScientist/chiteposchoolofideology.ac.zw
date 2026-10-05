@@ -3,9 +3,8 @@ import { Fragment } from "react";
 
 export const metadata: Metadata = {
   title: "Mission",
-  description: `We exist to cultivate a patriotic mindset, define our national
-              interest, and equip Zimbabweans with the ideological tools for
-              total economic sovereignty`,
+  description:
+    "To produce competent patriotic cadres with the correct Party Ideological orientation and necessary skills to meet the dynamic needs of the Zimbabwean nation.",
   icons: {
     icon: "/favicon.ico",
   },

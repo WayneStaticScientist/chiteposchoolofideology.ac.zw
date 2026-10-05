@@ -2,7 +2,6 @@ import React from "react";
 import {
   ShieldCheck,
   Target,
-  History,
   Award,
   Eye,
   CheckCircle2,
@@ -14,6 +13,7 @@ import NavBar from "@/components/layouts/navbar";
 import { Breadcrumb } from "@/components/layouts/breadcrump";
 import { ValueCard } from "@/components/layouts/value-card";
 import Footer from "@/components/layouts/footer";
+import { schoolIdentity } from "@/config/identity";
 
 /**
  * MOCK COMPONENTS
@@ -72,10 +72,11 @@ const App = () => {
                   Wiltshire Pfumaindini Chitepo, we serve as a forge for
                   patriotic consciousness.
                 </p>
+                <p className="mb-4 text-xl italic font-medium leading-relaxed text-green-700">
+                  {schoolIdentity.tagline}
+                </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                  Our mission is to decolonise the African mind through
-                  home-grown solutions, fostering a sense of ownership over our
-                  national destiny and economic prosperity.
+                  {schoolIdentity.mission}
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -121,11 +122,9 @@ const App = () => {
                   <div className="bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm">
                     <Target size={32} />
                   </div>
-                  <h3 className="text-3xl font-black mb-6">Our Mission</h3>
+                  <h3 className="text-3xl font-black mb-6">Mission</h3>
                   <p className="text-green-50 text-xl leading-relaxed">
-                    To interpret and define Zimbabwe’s past, present, and future
-                    within an ideological framework that promotes national
-                    interest, sovereignty, and social justice.
+                    {schoolIdentity.mission}
                   </p>
                 </div>
               </div>
@@ -138,11 +137,9 @@ const App = () => {
                   <div className="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 backdrop-blur-sm">
                     <Eye size={32} />
                   </div>
-                  <h3 className="text-3xl font-black mb-6">Our Vision</h3>
+                  <h3 className="text-3xl font-black mb-6">Vision</h3>
                   <p className="text-slate-300 text-xl leading-relaxed">
-                    To be the leading African institution in ideological
-                    training, nurturing leaders committed to the sustainable
-                    development and total empowerment of the Zimbabwean people.
+                    {schoolIdentity.vision}
                   </p>
                 </div>
               </div>
@@ -162,27 +159,25 @@ const App = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <ValueCard
-                icon={Zap}
-                title="Patriotism"
-                desc="Unwavering loyalty and devotion to the heritage and future of Zimbabwe."
-              />
-              <ValueCard
-                icon={History}
-                title="Integrity"
-                desc="Acting with honesty and strong moral principles in national service."
-              />
-              <ValueCard
-                icon={Scale}
-                title="Social Justice"
-                desc="Ensuring equality and fairness in the distribution of national resources."
-              />
-              <ValueCard
-                icon={Award}
-                title="Excellence"
-                desc="Striving for the highest standards in education and policy execution."
-              />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {schoolIdentity.coreValues.map((value) => {
+                const icons: Record<string, typeof Zap> = {
+                  patriotism: Zap,
+                  professionalism: Award,
+                  "gender-sensitivity": Users,
+                  integrity: Scale,
+                  "team-work": ShieldCheck,
+                };
+                const Icon = icons[value.key] ?? ShieldCheck;
+                return (
+                  <ValueCard
+                    key={value.key}
+                    icon={Icon}
+                    title={value.title}
+                    desc={value.description}
+                  />
+                );
+              })}
             </div>
           </div>
         </section>

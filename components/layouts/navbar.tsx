@@ -5,8 +5,7 @@ import React, { useEffect, useState } from "react";
 // Updated siteConfig with children for the About section
 export const siteConfig = {
   name: "Chitepo School of Ideology",
-  description:
-    "The Chitepo School of Ideology is more than an educational institution; it is the ideological heartbeat of Zimbabwe.",
+  description: "Chitepo School of Ideology — Decolonising the Mind.",
   navItems: [
     {
       label: "Home",

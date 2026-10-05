@@ -35,8 +35,8 @@ export const Breadcrumb = () => {
           Excellence
         </h1>
         <p className="text-xl text-slate-400 max-w-2xl leading-relaxed animate-in fade-in duration-1000 delay-200">
-          Tracing our roots from the liberation struggle to the modern center
-          for National Strategic Thought and Patriotic Leadership.
+          Decolonising the Mind — mission, vision, and core values that guide
+          ideological training for the Party and Government.
         </p>
       </div>
     </div>

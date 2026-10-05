@@ -11,6 +11,7 @@ import {
 import NavBar from "@/components/layouts/navbar";
 import Footer from "@/components/layouts/footer";
 import MainCarousel from "@/components/layouts/main-carousel";
+import { schoolIdentity } from "@/config/identity";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -31,8 +32,7 @@ const App = () => {
       addressCountry: "ZW",
     },
     telephone: "+27618046523",
-    description:
-      "Nurturing a new generation of patriots and leaders, committed to upholding the values of Zimbabwe's Constitution.",
+    description: schoolIdentity.mission,
     url: "https://chiteposchool.ac.zw",
   };
 
@@ -107,28 +107,24 @@ const HomeView = () => {
             </div>
             <div>
               <Quote size={80} className="text-green-100 mb-6" />
+              <p className="mb-4 font-serif text-2xl italic text-green-700">
+                {schoolIdentity.tagline}
+              </p>
               <h2 className="text-5xl font-black text-green-950 mb-8 leading-tight">
-                Shaping the Minds of Tomorrow.
+                Mission, vision & values
               </h2>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                <span className="font-bold text-green-950">Mission: </span>
+                {schoolIdentity.mission}
+              </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                As a beacon of hope for the nation’s future, the school will
-                continue to thrive, shaping the minds of tomorrow’s leaders and
-                driving progress in Zimbabwe. No amount of slander will derail
-                our mission.
+                <span className="font-bold text-green-950">Vision: </span>
+                {schoolIdentity.vision}
               </p>
               <div className="space-y-6">
-                {[
-                  {
-                    label: "Patriotism",
-                    desc: "Nurturing a deep-rooted love for our heritage.",
-                  },
-                  {
-                    label: "Ideological Clarity",
-                    desc: "Interpreting our history to drive prosperity.",
-                  },
-                ].map((item) => (
+                {schoolIdentity.coreValues.map((item) => (
                   <div
-                    key={item.label}
+                    key={item.key}
                     className="flex gap-5 p-6 rounded-2xl border border-slate-100 hover:border-green-200 transition-colors"
                   >
                     <div className="bg-green-100 p-3 rounded-xl text-green-700 h-fit">
@@ -136,9 +132,9 @@ const HomeView = () => {
                     </div>
                     <div>
                       <h4 className="font-black text-green-950">
-                        {item.label}
+                        {item.title}
                       </h4>
-                      <p className="text-sm text-slate-500">{item.desc}</p>
+                      <p className="text-sm text-slate-500">{item.description}</p>
                     </div>
                   </div>
                 ))}
